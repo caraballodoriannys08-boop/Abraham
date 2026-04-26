@@ -1,0 +1,19 @@
+-- 1. Crea un botón en la pantalla
+-- 2. Cuando lo toques, muestra "Hola, soy Abraham" en la consola
+
+-- SOLUCIÓN (inténtalo tú primero, luego mira esto):
+local player = game.Players.LocalPlayer
+
+local gui = Instance.new("ScreenGui")
+gui.Parent = player.PlayerGui
+
+local boton = Instance.new("TextButton")
+boton.Parent = gui
+boton.Size = UDim2.new(0, 200, 0, 50)
+boton.Position = UDim2.new(0.5, -100, 0, 100)
+boton.Text = "Saludar"
+boton.BackgroundColor3 = Color3.fromRGB(50, 50, 150)
+
+boton.MouseButton1Click:Connect(function()
+    print("Hola, soy Abraham")
+end)
